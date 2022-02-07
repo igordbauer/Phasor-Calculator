@@ -21,7 +21,7 @@ const fasPolarToRet =(num,angulo)=>{
 
     let Real = num*Math.cos(toDegrees(angulo));
     let Im = num*Math.sin(toDegrees(angulo))
-    let result = (parseFloat(Real.toFixed(2))) + ' ' + (parseFloat(Im.toFixed(2))) + 'j'
+    let result = parseFloat(Real.toFixed(2)) + ' ' + parseFloat(Im.toFixed(2)) + 'j'
     return result;
 }
 
@@ -30,17 +30,17 @@ const fasPolarToRet =(num,angulo)=>{
 // EX: 3 -2j  => 3.60|__-33.6900... (GRAUS)
 
 
-const num1 = 3
+const num1 = 11
 
-const num2 = -2
+const num2 = 8
 console.log('FORMA RETANGULAR => FORMA POLAR\n')
 console.log('forma fasorial retangular: '+ num1 +' '+num2+'j\n' + 'forma fasorial polar: ' + fasRettoPolar(num1,num2));
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 // TRANSFORMAR DA FORMA POLAR => FORMA RETANGULAR
 // EX: 46.17|__17.65 (GRAUS) => 43.79 -14.62j
-const numero = 46.17
+const numero = 2.19
 
-const angulo = 17.65
+const angulo = -40.92
 console.log('\n\nFORMA POLAR => FORMA RETANGULAR\n')
 console.log('forma fasorial polar:' + numero + '|_' + angulo +'\n'+'forma fasorial retangular:'+ fasPolarToRet(numero,angulo))
